@@ -1,0 +1,27 @@
+# --- Scraping (Step 1) ---
+playwright==1.60.0
+beautifulsoup4
+lxml
+
+# --- RAG retrieval layer (Step 2) ---
+fastembed          # local ONNX embeddings (BGE-small), no torch
+numpy
+pydantic           # validates the LLM's structured query (rag/understand.py)
+
+# --- Voice agent (Step 3) ---
+sherpa-onnx        # local ONNX speech: Silero VAD + Whisper/Moonshine STT + Piper TTS
+sounddevice        # microphone capture + speaker playback (PortAudio)
+groq               # LLM API client
+python-dotenv      # loads GROQ_API_KEY from .env
+
+# --- Web UI + CRM (Step 4/5) ---
+starlette          # async web server (pure-Python, Py 3.14 safe)
+uvicorn            # ASGI server
+websockets         # WebSocket transport
+python-multipart   # dashboard form (schedule editor) parsing
+rapidfuzz          # time-slot snapping + name fuzzy match
+jellyfish          # phonetic (Jaro-Winkler) customer matching
+
+# After install:
+#   python -m playwright install chromium     # only needed to re-scrape
+#   python -m voice.setup_models              # downloads the speech models (~260MB)

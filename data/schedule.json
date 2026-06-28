@@ -1,0 +1,12 @@
+{
+  "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+  ],
+  "start": "10:00",
+  "end": "17:00",
+  "slot_minutes": 30
+}

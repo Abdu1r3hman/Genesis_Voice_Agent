@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Genesis Certified · Aria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <!-- ===================== SPLASH ===================== -->
+  <section class="screen splash is-active" id="splash">
+    <div class="orb-brand big">
+      <div class="wave"></div>
+      <div class="brand-orb">
+        <img src="/static/genesis-logo.webp" class="orb-crest" alt="Genesis" />
+        <div class="orb-glow"></div>
+      </div>
+    </div>
+    <div class="wordmark" id="wordmark"></div>
+    <div class="splash-sub" id="splashSub">Preparing your concierge…</div>
+    <div class="loadbar"><span></span></div>
+  </section>
+
+  <!-- ===================== ONBOARDING / MODE ===================== -->
+  <section class="screen mode" id="mode">
+    <div class="onb">
+      <div class="orb-brand">
+        <div class="wave"></div>
+        <div class="brand-orb"><img src="/static/genesis-logo.webp" class="orb-crest" alt="Genesis" /><div class="orb-glow"></div></div>
+      </div>
+      <h1 class="hero">Meet <span class="grad-accent">Aria</span><br />your Genesis concierge</h1>
+      <p class="sub">Explore the Genesis Certified Pre-Owned collection — talk to Aria like a phone call, or chat by text.</p>
+      <div class="dots"><i class="on"></i><i></i><i></i></div>
+      <div class="onb-actions">
+        <button class="pill-btn primary" data-mode="call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/></svg>
+          Start Live Call
+        </button>
+        <button class="pill-btn" data-mode="chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          Open Chat
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CALL ===================== -->
+  <section class="screen call" id="call">
+    <header class="call-head">
+      <button class="icon-btn" id="callBack" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="call-id"><span class="who">GENESIS CONCIERGE</span><span class="line2" id="callName">Aria</span></div>
+      <div class="call-timer" id="callTimer">00:00</div>
+    </header>
+
+    <div class="call-body">
+      <div class="call-float" id="callFloat" aria-hidden="true"></div>
+      <div class="caption-hero" id="caption">Connecting you to Aria…</div>
+      <div class="call-status" id="callStatus">Listening…</div>
+      <div class="orb call-orb" id="orb">
+        <div class="orb-ring r1"></div>
+        <div class="orb-ring r2"></div>
+        <div class="orb-ring r3"></div>
+        <div class="orb-core">
+          <svg class="orb-mic" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/></svg>
+          <div class="orb-bars" id="orbBars"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="call-controls">
+      <button class="ctrl" id="muteBtn" aria-label="Mute"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/></svg></button>
+      <button class="ctrl end" id="endBtn" aria-label="End call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </footer>
+  </section>
+
+  <!-- ===================== CHAT ===================== -->
+  <section class="screen chat" id="chat">
+    <header class="chat-head">
+      <button class="icon-btn" id="chatBack" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="chat-id"><span class="av"><img src="/static/genesis-logo.webp" alt="Genesis" /></span><span>Aria</span></div>
+      <div class="status"><span class="dot" id="statusDot"></span><span id="statusText">Ready</span></div>
+    </header>
+
+    <div class="conversation" id="conversation">
+      <div class="welcome">
+        <div class="hint-card glass">
+          <div class="hint-title"><svg viewBox="0 0 24 24" fill="none" stroke="url(#sg)" stroke-width="1.6"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b14be8"/><stop offset="1" stop-color="#ff7a45"/></linearGradient></defs><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/></svg> Use text or voice — ask me anything</div>
+          <button class="hint-item" data-q="Show me your electric models"><span class="hi-check"></span>Show me your electric models</button>
+          <button class="hint-item" data-q="Find a GV80 under 300 thousand"><span class="hi-check"></span>Find a GV80 under 300 thousand</button>
+          <button class="hint-item" data-q="What's your most premium car, and what features does it have?"><span class="hi-check"></span>What's your most premium car and its features?</button>
+        </div>
+        <h2 class="hero sm">What are you looking for today?</h2>
+      </div>
+    </div>
+
+    <div class="cars" id="cars" aria-label="Matching vehicles"></div>
+
+    <footer class="composer">
+      <div class="comp-pill">
+        <input id="textInput" type="text" placeholder="Message Aria…" autocomplete="off" />
+        <button id="sendBtn" class="comp-send" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 6l6 6-6 6"/></svg></button>
+        <button id="micBtn" class="mic" aria-label="Talk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1.5a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0v-7a3 3 0 0 0-3-3z"/><path d="M5 10.5v1a7 7 0 0 0 14 0v-1"/><path d="M12 18.5V22"/></svg></button>
+      </div>
+    </footer>
+  </section>
+
+  <audio id="player" hidden></audio>
+  <script src="/static/app.js"></script>
+</body>
+</html>

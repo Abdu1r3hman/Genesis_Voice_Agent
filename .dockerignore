@@ -1,0 +1,14 @@
+# keep the build context small and never ship secrets / host-only artifacts
+.git/
+venv/
+__pycache__/
+*.pyc
+.env
+data/crm.db
+
+# speech models are downloaded fresh inside the image (setup_models.py)
+voice/models/
+
+# docs / scratch not needed at runtime
+*.log
+Commands.txt

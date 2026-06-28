@@ -1,0 +1,23 @@
+# secrets
+.env
+
+# python
+venv/
+__pycache__/
+*.pyc
+
+# local ONNX speech models (downloaded via voice/setup_models.py, ~260MB)
+voice/models/
+
+# local runtime data (created on first run, holds test bookings)
+data/crm.db
+
+# internal docs (not shipped to the public repo)
+docs/
+CONTEXT.md
+ROADMAP.md
+
+# scratch
+*.log
+running_eval_rag.txt
+Commands.txt
