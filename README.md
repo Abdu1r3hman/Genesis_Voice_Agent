@@ -10,12 +10,6 @@ hallucinated — and books a viewing. Assembled by hand: scraper + retrieval + S
 🎤 ─▶ VAD ─▶ Moonshine STT ─▶ understand (regex / LLM+Pydantic) ─▶ RAG ─▶ Groq LLM ─▶ Piper TTS ─▶ 🔊
                                                                           │
                                               everything local except the LLM (one network hop)
-```
-
-> 📹 **Demo:** _add your screen-recording / live link here_
-> 🌐 **Live demo:** _add a hosted link here (optional)_
-
----
 
 ## Run it
 
