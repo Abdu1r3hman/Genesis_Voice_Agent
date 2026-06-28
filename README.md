@@ -6,7 +6,10 @@ it retrieves the right cars from the scraped stock, answers — grounded, never
 hallucinated — and books a viewing. Assembled by hand: scraper + retrieval + STT/LLM/TTS
 + CRM. **No end-to-end voice-agent platform.**
 
-C:\Users\arehm\OneDrive\Desktop\TechNext Voice Agent\Product_image.png
+<p align="center">
+  <img src="Product_image.png" alt="Aria — Genesis CPO Voice Agent" width="820">
+</p>
+
 ```
 🎤 ─▶ VAD ─▶ Moonshine STT ─▶ understand (regex / LLM+Pydantic) ─▶ RAG ─▶ Groq LLM ─▶ Piper TTS ─▶ 🔊
                                                                           │
